@@ -74,9 +74,10 @@ export class ContentService implements OnInit, OnDestroy {
   }
 
   fetchImage(url:string): Observable<Blob> {
+    console.log("FETCHING THE URL: ", url)
     return this.http.get(url, {
       responseType: "blob"
-    });
+    })
   }
 
   ngOnInit() {}
